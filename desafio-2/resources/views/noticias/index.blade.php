@@ -59,7 +59,7 @@
                 <form action="{{route('noticia.search')}}" method="post" class="form-group row">
                     {{ csrf_field() }}
                     <div class="col-12 busca">
-                        <input type="text" name="search" class="form-control col-8" placeholder="Digite sua busca">
+                        <input type="text" name="search" class="form-control col-8" placeholder="Digite sua busca" value="{!! $search !!}">
                         <button class="btn btn-primary col-2">Buscar</button>
                     </div>
                 </form>
