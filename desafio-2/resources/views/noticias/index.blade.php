@@ -67,7 +67,7 @@
             @forelse($noticias->noticias as $noticia)
             <!--Notícia-->
                 <article class="box-noticia">
-                    <a href="{{ $noticia->url }}">
+                    <a href="{{ $noticia->url }}" target="_blank">
                         <figure>
                             <img src="{{ $noticia->imagem }}" alt="{{ $noticia->titulo }}">
                         </figure>
