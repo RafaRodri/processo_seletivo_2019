@@ -1,6 +1,19 @@
 <h1>**Desafio 3**</h1>
 
-<h2>**Resolução**</h2>
+<h2>Para executar projeto:</h2>
+<ol>
+    <li>Faça o clone do projeto</li>
+    <li>Acesse a pasta "desafio-3" dentro do projeto</li>
+    <li>Execute o comando "composer.install"</li>
+    <li>Configure o arquivo ".env"</li>
+    <li>Crie um database (com o nome definido no passo anterior)</li>
+    <li>Execute o comando "php artisan migrate:refresh"</li>
+    <li>Execute o comando "php artisan db:seed"</li>
+    <li>Execute o comando "php artisan serve"</li>
+</ol>
+<br>
+
+<h2>Resolução</h2>
 
 <h3>Projeto desenvolvido com Laravel.</h3><br>
 
