@@ -4,6 +4,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 @endsection()
 
+@section('js-view')
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script type="text/javascript">
+        $('.delete').on('click', function () {
+            if (!confirm("Deseja mesmo apagar esse dado?")) {
+                return false;
+            }
+        });
+    </script>
+@endsection()
+
 @section('content-view')
     @if(session('success'))
         <p>{{ session('success')['messages'] }}</p>
@@ -23,22 +35,28 @@
                 </thead>
 
                 <tbody>
-                @foreach($usuarios->usuarios as $usuario)
-                <tr>
-                    <th scope="row">{!! $usuario->id !!}</th>
-                    <td>{!! $usuario->nome !!}</td>
-                    <td>{!! $usuario->email !!}</td>
-                    <td>{!! $usuario->dataNascimento !!}</td>
-                    <td>
-                        <a href="{{ route('usuario.editar', $usuario->id) }}">
-                            <i class="fa fa-user-edit"></i>
-                        </a>
-                        <a href="{{ route('usuario.deletar', $usuario->id) }}">
-                            <i class="fa fa-user-minus text-danger"></i>
-                        </a>
-                    </td>
-                </tr>
-                @endforeach
+                @if(!empty($usuarios))
+                    @foreach($usuarios->usuarios as $usuario)
+                    <tr>
+                        <th scope="row">{!! $usuario->id !!}</th>
+                        <td>{!! $usuario->nome !!}</td>
+                        <td>{!! $usuario->email !!}</td>
+                        <td>{!! date('d/m/Y', strtotime($usuario->dataNascimento)) !!}</td>
+                        <td>
+                            <a href="{{ route('usuario.editar', $usuario->id) }}">
+                                <i class="fa fa-user-edit"></i>
+                            </a>
+                            <a class="delete" href="{{ route('usuario.deletar', $usuario->id) }}">
+                                <i class="fa fa-user-minus text-danger"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="5">Nenhum resultado encontrado</td>
+                    </tr>
+                @endif
                 </tbody>
             </table>
         </div>
