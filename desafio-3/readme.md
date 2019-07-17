@@ -1,16 +1,17 @@
 <h1>**Desafio 3**</h1>
 
-#### Projeto desenvolvido com Laravel.
+### Projeto desenvolvido com Laravel.
 
-##### CRUD
+#### CRUD
 * Criação da tabela foi realizada por meio de migrations.
 * Os primeiros registros foram adicionados por meio de seeds.
 
 
-##### Desenvolvimento de uma API
+#### Desenvolvimento de uma API
 * Os dados também poderão ser acessados por meio de uma API desenvolvida.
 * A ação requisitada pelo consumidor da API, deve ser feita por meio de verbos HTTP.
 
+<br>
 
 Método | Endpoint | Ação | Exemplo |
 | --- | --- | --- | --- |
@@ -22,7 +23,7 @@ Método | Endpoint | Ação | Exemplo |
 
 <br>
 
-###### API em funcionamento:
+##### API em funcionamento:
 <img src="public/desafio-3-3.png">
 <br>
 <img src="public/desafio-3-4.png">
@@ -31,7 +32,7 @@ Método | Endpoint | Ação | Exemplo |
 #### Desenvolvimento front-end
 * Com HTML e CSS, foram desenvolvidas telas, para facilitar uma interação do usuário com a base de dados.
 
-###### Imagens front-end:
+##### Imagens front-end:
 <img src="public/desafio-3-1.png">
 <br>
 <img src="public/desafio-3-2.png">
